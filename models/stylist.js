@@ -9,4 +9,5 @@ const Stylist = new Schema(
   },
   { timestamps: true }
 );
-module.exports = Stylist;
+
+module.exports = mongoose.model('stylists', Stylist);
