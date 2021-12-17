@@ -3,9 +3,10 @@ const Schema = mongoose.Schema;
 
 const Stylist = new Schema(
   {
-    stylist_name: { type: String, required: true },
-    services: [{ type: Schema.Types.ArrayId, ref: 'services' }],
-    availability: [{ type: Schema.Types.ObjectId, ref: 'availability' }],
+    first_name: { type: String, required: true },
+    last_name: { type: String, required: true },
+    contact: { type: String, required: true },
+    service_type: { type: String, required: true },
     appointments: [{ type: Schema.Types.ObjectId, ref: 'appointments' }]
   },
   { timestamps: true }
