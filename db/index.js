@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-let MONGO_URI = 'mongodb: //127.0.0.1:27017/stylistsDatabase';
+let MONGODB_URI = 'mongodb: //127.0.0.1:27017/stylistsDatabase';
 
 mongoose
   .connect(MONGODB_URI, { useUnifiedTopology: true, useNewUrlParser: true })
