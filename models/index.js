@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-const StylistSchema = require('./stylist');
-const AppointmentSchema = require('./appointment');
+const StylistSchema = require('./Stylist');
+const AppointmentSchema = require('./Appointment');
 
-const Stylist = model('stylists', StylistSchema);
-const Appointment = model('appointments', AppointmentSchema);
+const Stylist = mongoose.model('stylists', StylistSchema);
+const Appointment = mongoose.model('appointments', AppointmentSchema);
 
 module.exports = {
   Stylist,
