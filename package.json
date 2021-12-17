@@ -1,7 +1,7 @@
 {
   "name": "invasion_salon",
   "version": "1.0.0",
-  "description": "",
+  "description": "### _Description_",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/charlielin1988/Invasion_Salon"
+    "url": "git+https://github.com/charlielin1988/Invasion_Salon.git"
   },
   "keywords": [],
   "author": "",
