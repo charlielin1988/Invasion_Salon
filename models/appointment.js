@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const Appointment = newSchema(
+const Appointment = new Schema(
   {
     customer_name: { type: String, required: true },
     stylist_name: { type: String, required: true },
