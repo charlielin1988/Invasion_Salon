@@ -1,5 +1,5 @@
 const db = require('../db')
-const { Stylist } = require('../models')
+const { Stylist } = require('../models/stylist')
 
 const main = async () => {
   const stylists = [

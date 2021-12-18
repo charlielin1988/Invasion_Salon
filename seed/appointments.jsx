@@ -1,5 +1,5 @@
 const db = require('../db')
-const { Stylist, Appointment } = ('../models')
+const  Appointment  = ('../models/appointment')
 
 const main = async () => {
   const maybeSaylor = await Stylist.find({ name: 'Maybe Saylor'})
