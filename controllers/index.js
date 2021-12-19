@@ -1,7 +1,5 @@
 const Stylist = require('../models/stylist');
 const Appointment = require('../models/appointment');
-const { send } = require('express/lib/response');
-const { restart } = require('nodemon');
 
 const getAllStylists = async (req, res) => {
   try {
@@ -24,7 +22,7 @@ const getAllAppointments = async (req, res) => {
 const getStylistById = async (req, res) => {
   try {
     const { id } = req.params;
-    const sylist = await Stylist.findById(id);
+    const stylist = await Stylist.findById(id);
     if (stylist) {
       return res.status(200).json({ stylist });
     }
