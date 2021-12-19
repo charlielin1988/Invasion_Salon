@@ -20,6 +20,10 @@
   },
   "homepage": "https://github.com/charlielin1988/Invasion_Salon#readme",
   "dependencies": {
-    "mongoose": "^6.1.2"
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
   }
 }
