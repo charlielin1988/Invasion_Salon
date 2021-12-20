@@ -58,7 +58,7 @@ const updateAppointment = async (req, res) => {
         if (!appointment) {
           res.status(500).send('Appointment not found!');
         }
-        return res.status(200).json(plant);
+        return res.status(200).json(appointment);
       }
     );
   } catch (error) {}
