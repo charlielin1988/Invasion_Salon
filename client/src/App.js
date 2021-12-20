@@ -1,20 +1,26 @@
-import './App.css';
+import './styles/App.css';
+import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-
-function App() {
+import Home from './pages/Home';
+import ServiceMenu from './pages/ServiceMenu';
+import Nav from './components/Nav';
+const App = () => {
   return (
-    <div className="App">
-      <Header />
+    <div>
+      <header>
+        <Nav />
+      </header>
       <main>
         <Switch>
-          <Routes>
-            <Route path="/" component={<Home />} />
-            <Route path="/stylists/:id" component={<Stylist />} />
-          </Routes>
+          <Route exact path="/" component={Home} />
+          <Route
+            path="service-menu"
+            component={(props) => <ServiceMenu {...props} />}
+          />
         </Switch>
       </main>
     </div>
   );
-}
+};
 
 export default App;
