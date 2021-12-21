@@ -1,5 +1,5 @@
 import React from 'react'
-import services from '../data/Services'
+import services from '../data/services'
 import ServiceItem from '../components/ServiceItem'
 import ServiceList from '../components/ServiceList'
 

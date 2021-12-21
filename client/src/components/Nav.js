@@ -8,7 +8,7 @@ const Nav = () => {
       <br />
       <Link to="/service-menu">View Our Service Menu</Link>
       <br />
-      <Link to="/appointment">Book An Appointment</Link>
+      <Link to="/appointments">Book An Appointment</Link>
     </nav>
   );
 };

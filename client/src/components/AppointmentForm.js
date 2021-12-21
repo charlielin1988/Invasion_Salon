@@ -10,7 +10,7 @@ const AppointmentForm = (props) => {
 
   const handleSubmit = (async = () => {
     const res = await axios.post('localhost:3001/api/appointments');
-    console.log(customerName, serviceName, date, time);
+    console.log(customerName, serviceName, day, time);
     console.log(res);
   });
   return (
@@ -28,10 +28,10 @@ const AppointmentForm = (props) => {
 
         <input
           type="text"
-          serviceName={props.serviceName}
+          stylistName={props.stylistName}
           onChange={props.onChange}
-          name="serviceName"
-          placholder={'Service Name'}
+          name="stylistName"
+          placholder={'Stylist Name'}
         />
 
         <input
