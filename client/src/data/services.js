@@ -21,5 +21,4 @@ const services = [
   { id: 20, name: 'Microdermabrasion Express', price: 85 },
   { id: 21, name: 'Back Facial', price: 110 }
 ];
-
 export default services;

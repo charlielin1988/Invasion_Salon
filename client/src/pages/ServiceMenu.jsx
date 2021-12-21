@@ -1,15 +1,19 @@
 import React from 'react'
-import services from '../data/services'
+import services from '../data/Services'
 import ServiceItem from '../components/ServiceItem'
 import ServiceList from '../components/ServiceList'
 
+
 const ServiceMenu = (props) => {
+ 
+
   return(
     
     <div className = 'service-list'>
       <h1>Services</h1>
       <ServiceList>
-      {services.map((service) =>(
+      {
+      props.services.map((service) =>(
         <ServiceItem
         key={service.id}
         name={service.name}

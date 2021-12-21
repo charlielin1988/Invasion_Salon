@@ -1,6 +1,23 @@
 .App {
   text-align: center;
 }
+body {
+  width: 100vh;
+  height: 100vw;
+  text-align: center;
+  color: black;
+}
 .ServiceMenu {
+  display: flex;
+  height: 90vh;
+  width: 100vw;
+  align-content: center;
+}
+.service-list {
+  list-style: none;
+  width: 100vw;
+}
+.navbar {
+  width: 100vw;
   text-align: center;
 }
