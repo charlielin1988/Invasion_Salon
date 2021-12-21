@@ -20,4 +20,9 @@ body {
 .navbar {
   width: 100vw;
   text-align: center;
+  margin: 10px;
+}
+h1 {
+  text-align: center;
+  width: 100vw;
 }
