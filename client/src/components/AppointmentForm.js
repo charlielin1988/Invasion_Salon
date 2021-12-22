@@ -1,61 +1,107 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const AppointmentForm = (props) => {
-  const [customerName, setCustomerName] = useState('');
-  const [serviceName, setServiceName] = useState('');
-  const [month, setMonth] = useState('');
-  const [day, setDay] = useState('');
-  const [time, setTime] = useState('');
-
-  const handleSubmit = (async = () => {
-    const res = await axios.post('localhost:3001/api/appointments');
-    console.log(customerName, serviceName, day, time);
-    console.log(res);
+  const [newAppointment, setNewAppointment] = useState({
+    customer_name: '',
+    service_name: '',
+    month: '',
+    day: '',
+    time: '',
+    stylist_id: props.match.params.stylistId
   });
+
+  // const [customerName, setCustomerName] = useState('');
+  // const [serviceName, setServiceName] = useState('');
+  // const [month, setMonth] = useState('');
+  // const [day, setDay] = useState(0);
+  // const [time, setTime] = useState(0);
+  // const [stylist, setStylist] = useState('');
+
+  const submit = (e) => {
+    e.preventDefault();
+    axios.post('http://localhost:3001/api/appointments', {
+      customer_name: newAppointment.customer_name,
+      service_name: newAppointment.service_name,
+      month: newAppointment.month,
+      day: newAppointment.day,
+      time: newAppointment.time,
+      stylist_id: newAppointment.stylist_id
+      //   console.log(res);
+    });
+    let diffAppointment = {
+      customer_name: '',
+      service_name: '',
+      month: '',
+      day: '',
+      time: ''
+    };
+    setNewAppointment(diffAppointment);
+    window.location.reload();
+  };
+  const handleChange = (e) => {
+    const newestAppointment = { ...newAppointment };
+    newestAppointment[e.target.id] = e.target.value;
+    setNewAppointment(newestAppointment);
+    console.log(newestAppointment);
+  };
+
   return (
     <div className="appointment-form">
       <h1>Book An Appointment</h1>
 
-      <form onSubmit={props.onSubmit}>
+      <form onSubmit={(e) => submit(e)}>
         <input
           type="text"
-          customerName={props.customerName}
-          onChange={props.onChange}
-          name="customerName"
+          value={newAppointment.customer_name}
+          onChange={(e) => handleChange(e)}
+          name="customer-name"
           placeholder={'Guest Name'}
+          id="customer_name"
         />
 
         <input
           type="text"
-          stylistName={props.stylistName}
-          onChange={props.onChange}
-          name="stylistName"
-          placholder={'Stylist Name'}
+          value={newAppointment.service_name}
+          onChange={(e) => handleChange(e)}
+          name="service-name"
+          placholder={'Service Name'}
+          id="service_name"
         />
 
         <input
           type="text"
-          month={props.month}
-          onChange={props.onChange}
+          value={newAppointment.month}
+          onChange={(e) => handleChange(e)}
           name="month"
           placeholder={'Month'}
+          id="month"
         />
 
         <input
           type="integer"
-          day={props.day}
-          onChange={props.onChange}
+          value={newAppointment.day}
+          onChange={(e) => handleChange(e)}
           name="day"
           placeholder={'Day'}
+          id="day"
         />
 
         <input
           type="integer"
-          time={props.time}
-          onChange={props.onChange}
+          value={newAppointment.time}
+          onChange={(e) => handleChange(e)}
           name="time"
-          placehodler={'Time'}
+          placeholder={'Time'}
+          id="time"
+        />
+        <input
+          type="text"
+          value={newAppointment.stylist}
+          onChange={(e) => handleChange(e)}
+          name="stylist"
+          placeholder={'Stylist Name'}
+          id="stylist"
         />
 
         <button type="submit">Book Now</button>

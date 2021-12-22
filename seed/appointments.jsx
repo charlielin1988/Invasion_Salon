@@ -8,15 +8,17 @@ const createAppointments = async () => {
   {
   customer_name: 'Alexis Rose',
   service_name: 'cut and color',
-    date: 'January 11th, 2022',
-    time: '10:00 AM',
+    month: 'January',
+    day: '11',
+    time: '10',
     stylist: 'Maybe Saylor'
   },
   {
   customer_name: 'David Rose',
   service_name: 'Get Glowing Facial',
-  date: 'January 12th, 2022',
-  time: '2:00 PM',
+  month: 'January',
+  day: '13',
+  time: '2',
   stylist: 'Jeanette'
   }
 ]

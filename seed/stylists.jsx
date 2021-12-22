@@ -7,14 +7,14 @@ const main = async () => {
   const stylists = [
     {
     name: 'Maybe Saylor',
-    service_type: 'hair',
-    availability: ['Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+    service_type: 'Hair',
+    availability: 'Tuesday-Saturday, 10AM-7PM '
 
     },
   {
     name: 'Jeanette',
-    service_type: 'esthetics',
-    availability:['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
+    service_type: 'Esthetics',
+    availability: 'Monday-Friday, 10AM-7PM'
   }
   ]
   await Stylist.insertMany(stylists)
