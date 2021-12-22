@@ -6,8 +6,7 @@ import axios from 'axios'
 
 const StylistAppointment = (props) => {
   const [selectedStylist, setSelectedStylist] = useState(null)
-  const [appointments, setAppointments] = useState([])
-
+  
 
   // const [form, setForm] =useState({
   //   customer: "",
@@ -22,22 +21,19 @@ const StylistAppointment = (props) => {
   //   setForm({...form, [e.target.name]: e.target.value})
   //   console.log({...form, [e.target.name]: e.target.value})
   // } 
+  useEffect(() => {
+    getStylist()
+  }, [])
   const getStylist = async () => {
     const res= await axios.get(
-      `http://localhost:3001/api/stylists/${props.match.params.stylistId}`
+      `http://localhost:3001/api/stylists/${props.match.params._stylistId}`
     )
     setSelectedStylist(res.data.stylist)
   }
 
-  const getAppointments = async () => {
-    const res = await axios.get(`http://localhost:3001/api/appointments`)
-    setAppointments(res.data.appointments)
-  }
+  
 
-  useEffect(() => {
-    getStylist()
-    getAppointments()
-  }, [])
+  
   return selectedStylist ? (
     <div className ="stylist-card">
       <div className="info-wrapper">
@@ -46,8 +42,8 @@ const StylistAppointment = (props) => {
       <div className="appointment-card">
         
           <AppointmentForm {...props} />
-          {appointments.map((appointment) => {
-            if(appointment.stylist_id === props.match.params.stylistId){
+          {props.appointments.map((appointment) => {
+            if(appointment.stylist._id === props.match.params._stylistId){
               return (
             <Appointments
             key={appointment._id}

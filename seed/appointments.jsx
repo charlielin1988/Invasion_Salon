@@ -1,9 +1,13 @@
 const db = require('../db')
+const Stylist = require('../models/stylist')
 const Appointment = require('../models/appointment')
 
 db.on('error', console.error.bind(console, 'MongoDB Connection error:'))
 
-const createAppointments = async () => {
+const main = async () => {
+  const maybeSaylor = await Stylist.find({ name: 'Maybe Saylor' })
+  const jeanette = await Stylist.find({name: 'Jeanette' })
+  
   const appointments = [
   {
   customer_name: 'Alexis Rose',
@@ -11,7 +15,7 @@ const createAppointments = async () => {
     month: 'January',
     day: '11',
     time: '10',
-    stylist: 'Maybe Saylor'
+    stylist_id: maybeSaylor[0]._id
   },
   {
   customer_name: 'David Rose',
@@ -19,15 +23,14 @@ const createAppointments = async () => {
   month: 'January',
   day: '13',
   time: '2',
-  stylist: 'Jeanette'
+  stylist_id: jeanette[0]._id
   }
 ]
 await Appointment.insertMany(appointments)
 console.log('Created appointments!')
-return appointments;
 }
 const run = async () => {
-  const appointment = await createAppointments();
+  await main();
   db.close()
 }
 run()

@@ -11,13 +11,6 @@ const AppointmentForm = (props) => {
     stylist_id: props.match.params.stylistId
   });
 
-  // const [customerName, setCustomerName] = useState('');
-  // const [serviceName, setServiceName] = useState('');
-  // const [month, setMonth] = useState('');
-  // const [day, setDay] = useState(0);
-  // const [time, setTime] = useState(0);
-  // const [stylist, setStylist] = useState('');
-
   const submit = (e) => {
     e.preventDefault();
     axios.post('http://localhost:3001/api/appointments', {

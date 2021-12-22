@@ -8,7 +8,7 @@ const Appointment = new Schema(
     month: { type: String, required: true },
     day: { type: String, required: true },
     time: { type: String, required: true },
-    stylist: { type: String, required: true }
+    stylist_id: { type: Schema.Types.ObjectId, ref: 'stylists' }
   },
   { timestamps: true }
 );

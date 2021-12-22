@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 
 
 const Stylist = (props) => {
-  console.log(props.id)
+  console.log(props._id)
   return (
     <div className = 'stylist-card' onClick={props.onClick}>
       <div className = 'info-wrapper'>
