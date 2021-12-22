@@ -88,14 +88,14 @@ const AppointmentForm = (props) => {
           placeholder={'Time'}
           id="time"
         />
-        <input
+        {/* <input
           type="text"
           value={newAppointment.stylist}
           onChange={(e) => handleChange(e)}
           name="stylist"
           placeholder={'Stylist Name'}
           id="stylist"
-        />
+        /> */}
 
         <button type="submit">Book Now</button>
       </form>

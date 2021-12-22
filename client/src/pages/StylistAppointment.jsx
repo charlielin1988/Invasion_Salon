@@ -26,7 +26,7 @@ const StylistAppointment = (props) => {
   }, [])
   const getStylist = async () => {
     const res= await axios.get(
-      `http://localhost:3001/api/stylists/${props.match.params._stylistId}`
+      `http://localhost:3001/api/stylists/details/${props.match.params.stylistId}`
     )
     setSelectedStylist(res.data.stylist)
   }

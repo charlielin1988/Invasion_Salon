@@ -1,5 +1,6 @@
 const Stylist = require('../models/stylist');
 const Appointment = require('../models/appointment');
+const { process_params } = require('express/lib/router');
 
 const getAllStylists = async (req, res) => {
   try {
@@ -21,8 +22,8 @@ const getAllAppointments = async (req, res) => {
 
 const getStylistById = async (req, res) => {
   try {
-    const { id } = req.params;
-    const stylist = await Stylist.findById(id);
+    const { _id } = req.params;
+    const stylist = await Stylist.findById(_id);
     if (stylist) {
       return res.status(200).json({ stylist });
     }
@@ -46,7 +47,7 @@ const createAppointment = async (req, res) => {
 
 const updateAppointment = async (req, res) => {
   try {
-    const { id } = req.params;
+    const { _id } = req.params;
     await Appointment.findByIdAndUpdate(
       id,
       req.body,
@@ -66,8 +67,8 @@ const updateAppointment = async (req, res) => {
 
 const getAppointmentById = async (req, res) => {
   try {
-    const { id } = req.params;
-    const appointment = await Appointment.findById(id);
+    const { _id } = req.params;
+    const appointment = await Appointment.findById(_id);
     if (appointment) {
       return res.status(200).json({ appointment });
     }
@@ -81,8 +82,8 @@ const getAppointmentById = async (req, res) => {
 
 const deleteAppointment = async (req, res) => {
   try {
-    const { id } = req.params;
-    const deleted = await Appointment.findByIdAndDelete(id);
+    const { _id } = req.params;
+    const deleted = await Appointment.findByIdAndDelete(_id);
     if (deleted) {
       return res.status(200).send('Appointment deleted!');
     }

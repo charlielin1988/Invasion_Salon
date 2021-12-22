@@ -5,19 +5,13 @@ import Home from './pages/Home';
 import Nav from './components/Nav';
 import ServiceMenu from './pages/ServiceMenu';
 import services from './data/services';
-import StylistAppointment from './pages/StylistAppointment';
 import axios from 'axios';
-//import Stylist from './components/Stylist';
+import AppointmentForm from './components/AppointmentForm';
+// import StylistAppointment from './pages/StylistAppointment';
+import Stylist from './components/Stylist';
+import Appointments from './components/Appointments';
+
 const App = () => {
-  const [appointments, setAppointments] = useState([]);
-  const getAppointments = async () => {
-    const res = await axios.get(`http://localhost:3001/api/appointments`);
-    setAppointments(res.data.appointments);
-    console.log(appointments);
-  };
-  useEffect(() => {
-    getAppointments();
-  }, []);
   return (
     <div>
       <header>
@@ -30,7 +24,11 @@ const App = () => {
             path="/service-menu"
             render={(props) => <ServiceMenu {...props} services={services} />}
           />
-          <Route path="/appointments" component={StylistAppointment} />
+          <Route path="/stylists" render={(props) => <Stylist {...props} />} />
+          <Route
+            path="/appointments"
+            component={(props) => <AppointmentForm {...props} />}
+          />
         </Switch>
       </main>
     </div>

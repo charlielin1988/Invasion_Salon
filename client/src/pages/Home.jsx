@@ -6,6 +6,15 @@ import { useHistory } from 'react-router-dom'
 const Home = (props) => {
   let history = useHistory()
   const [stylists, setStylists]=useState([])
+  const [appointments, setAppointments] = useState([]);
+  const getAppointments = async () => {
+    const res = await axios.get(`http://localhost:3001/api/appointments`);
+    setAppointments(res.data.appointments);
+    console.log(appointments);
+  };
+  useEffect(() => {
+    getAppointments();
+  }, []);
   useEffect(() => {
     getStylists()
 
@@ -28,8 +37,7 @@ const Home = (props) => {
         service_type={stylist.service_type}
         availability={stylist.availability}
         key={stylist._id}
-        onClick={()=> history.push(`/stylists/:id${stylist._id}`)}
-        {...stylist}
+        onClick={()=> history.push(`/stylists/details/${stylist._id}`)}
         />
         )
       }
