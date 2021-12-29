@@ -1,19 +1,19 @@
 import React from 'react'
-import services from '../data/services'
+import HairServices from '../data/HairServices'
 import ServiceItem from '../components/ServiceItem'
 import ServiceList from '../components/ServiceList'
 
 
-const ServiceMenu = (props) => {
+const HairServiceMenu = (props) => {
  
 
   return(
     
     <div className = 'service-list'>
-      <h1>Services</h1>
+      <h1> Hair Services</h1>
       <ServiceList>
       {
-      props.services.map((service) =>(
+      HairServices.map((service) =>(
         <ServiceItem
         key={service.id}
         name={service.name}
@@ -24,6 +24,6 @@ const ServiceMenu = (props) => {
     </div>
   )
 }
-console.log(services)
+console.log(HairServices)
 
-export default ServiceMenu
+export default HairServiceMenu

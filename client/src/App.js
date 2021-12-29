@@ -1,15 +1,10 @@
 import './styles/App.css';
-import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import Nav from './components/Nav';
-import ServiceMenu from './pages/ServiceMenu';
-import services from './data/services';
-import axios from 'axios';
-import AppointmentForm from './components/AppointmentForm';
-// import StylistAppointment from './pages/StylistAppointment';
-import Stylist from './components/Stylist';
-import Appointments from './components/Appointments';
+import HairServiceMenu from './pages/HairServiceMenu';
+import EstheticServiceMenu from './pages/EstheticServiceMenu';
+import StylistDetails from './pages/StylistDetails';
 
 const App = () => {
   return (
@@ -20,14 +15,14 @@ const App = () => {
       <main>
         <Switch>
           <Route exact path="/" component={(props) => <Home {...props} />} />
+          <Route path="/hair-service-menu" component={HairServiceMenu} />
           <Route
-            path="/service-menu"
-            render={(props) => <ServiceMenu {...props} services={services} />}
+            path="/esthetic-service-menu"
+            component={EstheticServiceMenu}
           />
-          <Route path="/stylists" render={(props) => <Stylist {...props} />} />
           <Route
-            path="/appointments"
-            component={(props) => <AppointmentForm {...props} />}
+            path="/stylists/details/:stylistId"
+            render={(props) => <StylistDetails {...props} />}
           />
         </Switch>
       </main>

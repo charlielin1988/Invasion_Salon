@@ -4,11 +4,11 @@ const router = Router();
 
 router.get('/', (req, res) => res.send('This is root'));
 router.get('/stylists', controllers.getAllStylists);
-router.get('/stylists/details/:_id', controllers.getStylistById);
-router.post('/appointments', controllers.createAppointment);
-router.put('/appointments/details/:_id', controllers.updateAppointment);
-router.delete('/appointments/details/:_id', controllers.deleteAppointment);
-router.get('/appointments', controllers.getAllAppointments);
-router.get('/appointments/details/:_id', controllers.getAppointmentById);
+router.get('/stylists/appointments', controllers.getAllAppointments);
+router.get('/stylists/appointments/:id', controllers.getAppointmentById);
+router.get('/stylists/:id', controllers.getStylistById);
+router.post('/stylists/appointments', controllers.createAppointment);
+router.put('/stylists/appointments/:id', controllers.updateAppointment);
+router.delete('/stylists/appointments/:id', controllers.deleteAppointment);
 
 module.exports = router;

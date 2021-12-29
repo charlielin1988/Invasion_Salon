@@ -12,16 +12,14 @@ const main = async () => {
   {
   customer_name: 'Alexis Rose',
   service_name: 'cut and color',
-    month: 'January',
-    day: '11',
-    time: '10',
-    stylist_id: maybeSaylor[0]._id
+  date: '2022-12-01',
+  time: '10',
+  stylist_id: maybeSaylor[0]._id
   },
   {
   customer_name: 'David Rose',
   service_name: 'Get Glowing Facial',
-  month: 'January',
-  day: '13',
+  date: '2022-13-01',
   time: '2',
   stylist_id: jeanette[0]._id
   }
