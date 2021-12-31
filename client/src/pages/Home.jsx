@@ -14,6 +14,7 @@ const Home = (props) => {
         `http://localhost:3001/api/stylists`
       )
       setStylists(res.data.stylists)
+      console.log(res.data)
     }
     getStylists()
   }, [])

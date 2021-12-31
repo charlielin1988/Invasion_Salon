@@ -5,7 +5,7 @@ const Appointment = new Schema(
   {
     customer_name: { type: String, required: true },
     service_name: { type: String, required: true },
-    appointment_date: { type: Date, min: '2022-01-05', max: '2022-05-01' },
+    appointment_date: { type: String, required: true },
     time: { type: String, required: true },
     stylist_id: { type: Schema.Types.ObjectId, ref: 'stylists' }
   },

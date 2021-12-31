@@ -21,7 +21,7 @@ const App = () => {
             component={EstheticServiceMenu}
           />
           <Route
-            path="/stylists/details/:stylistId"
+            path="/stylists/:stylistId"
             render={(props) => <StylistDetails {...props} />}
           />
         </Switch>

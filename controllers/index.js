@@ -26,7 +26,7 @@ const getAllStylists = async (req, res) => {
 const getAllAppointments = async (req, res) => {
   try {
     const appointments = await Appointment.find();
-    return res.status(200).json({ appointments });
+    return res.status(200).json(appointments);
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }
@@ -39,7 +39,7 @@ const getStylistById = async (req, res) => {
     if (stylist) {
       return res.status(200).json({ stylist });
     }
-    return res.status(404).send('Stylist with the specified ID does not exist');
+    return res.status(404).send('Stylist with the specified id does not exist');
   } catch (error) {
     return res.status(500).send(error.message);
   }
@@ -50,11 +50,11 @@ const getAppointmentById = async (req, res) => {
     const { id } = req.params;
     const appointment = await Appointment.findById(id);
     if (appointment) {
-      return res.status(200).json({ appointment });
+      return res.status(200).json(appointment);
     }
     return res
       .status(404)
-      .send('Appointment with the specified ID does not exist');
+      .send('Appointment with the specified id does not exist');
   } catch (error) {
     return res.status(500).send(error.message);
   }
@@ -74,7 +74,7 @@ const updateAppointment = async (req, res) => {
         if (!appointment) {
           res.status(500).send('Appointment not found!');
         }
-        return res.status(200).json({ appointment });
+        return res.status(200).json(appointment);
       }
     );
   } catch (error) {
@@ -85,7 +85,7 @@ const updateAppointment = async (req, res) => {
 const deleteAppointment = async (req, res) => {
   try {
     const { id } = req.params;
-    const deleted = await Appointment.findByIdAndDelete(_id);
+    const deleted = await Appointment.findByIdAndDelete(id);
     if (deleted) {
       return res.status(200).send('Appointment deleted!');
     }

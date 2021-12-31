@@ -10,8 +10,6 @@ const Nav = () => {
       <br />
       <Link to="esthetic-service-menu">Esthetic Services</Link>
       <br />
-      <Link to="/stylists/appointments">Appointments</Link>
-      <br />
     </nav>
   );
 };

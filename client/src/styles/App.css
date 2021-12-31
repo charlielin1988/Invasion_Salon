@@ -22,7 +22,7 @@ body {
   text-align: center;
   margin: 10px;
 }
-h1 {
-  text-align: center;
+div.home {
   width: 100vw;
+  text-align: center;
 }
