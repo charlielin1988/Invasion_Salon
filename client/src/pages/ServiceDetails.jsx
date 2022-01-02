@@ -16,7 +16,7 @@ const ServiceDetails = (props) => {
     const res= await axios.get(
     `http://localhost:3001/api/appointments`
     )
-    setAppointments(res.data)
+    setAppointments(res.data.appointments)
   }
   useEffect(() => {
     getService()
@@ -46,7 +46,6 @@ const ServiceDetails = (props) => {
             setAppointments={setAppointments}
             appointments={appointments}
             index={index}
-            service_name={appointment.service_name}
             customer_name={appointment.customer_name}
             date={appointment.date}
             time={appointment.time}
