@@ -5,25 +5,26 @@ const AppointmentForm = (props) => {
   const [newAppointment, setNewAppointment] = useState({
     customer_name: '',
     service_name: '',
-    appointment_date: '',
+    date: '',
     time: '',
-    stylist_id: props.match.params.stylistId
+    service_id: props.match.params.serviceId
   });
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(newAppointment.customer_name);
-    axios.post(`http://localhost:3001/api/stylists/appointments`, {
+    axios.post(`http://localhost:3001/api/appointments`, {
       customer_name: newAppointment.customer_name,
       service_name: newAppointment.service_name,
-      appointment_date: newAppointment.appointment_date,
+      date: newAppointment.date,
       time: newAppointment.time,
-      stylist_id: newAppointment.stylist_id
+      service_id: newAppointment.service_id
     });
     let differentAppointment = {
       customer_name: '',
       service_name: '',
-      appointment_date: '',
-      time: ''
+      date: '',
+      time: '',
+      service_id: props.match.params.serviceId
     };
     setNewAppointment(differentAppointment);
     window.location.reload();
@@ -50,7 +51,12 @@ const AppointmentForm = (props) => {
         </section>
         <section className="hair-service-input">
           Hair Service:
-          <select name={'service_name'} onChange={(e) => handleChange(e)}>
+          <select
+            name={'service_name'}
+            onChange={(e) => handleChange(e)}
+            value={newAppointment.service_name}
+            id="service_name"
+          >
             <option value="1">Single Process Color</option>
             <option value="2">Dimensional Blonde</option>
             <option value="3">Global Blonde</option>
@@ -70,7 +76,7 @@ const AppointmentForm = (props) => {
           <input
             type="date"
             appointment_date="date"
-            value={newAppointment.appointment_date}
+            value={newAppointment.date}
             id="appointment_date"
             onChange={(e) => handleChange(e)}
           />

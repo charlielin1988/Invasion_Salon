@@ -30,7 +30,7 @@ const createAppointment = async (req, res) => {
 const getAllServices = async (req, res) => {
   try {
     const services = await Service.find();
-    return res.status(200).json(services);
+    return res.status(200).json({ services });
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }
@@ -39,7 +39,7 @@ const getAllServices = async (req, res) => {
 const getAllAppointments = async (req, res) => {
   try {
     const appointments = await Appointment.find();
-    return res.status(200).json(appointments);
+    return res.status(200).json({ appointments });
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }
@@ -50,7 +50,7 @@ const getServiceById = async (req, res) => {
     const { _id } = req.params;
     const service = await Service.findById(_id);
     if (service) {
-      return res.status(200).json(service);
+      return res.status(200).json({ service });
     }
     return res.status(404).send('Service with the specified id does not exist');
   } catch (error) {
@@ -63,7 +63,7 @@ const getAppointmentById = async (req, res) => {
     const { _id } = req.params;
     const appointment = await Appointment.findById(_id);
     if (appointment) {
-      return res.status(200).json(appointment);
+      return res.status(200).json({ appointment });
     }
     return res
       .status(404)

@@ -2,9 +2,8 @@ import './styles/App.css';
 import { Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import Nav from './components/Nav';
-import HairServiceMenu from './pages/HairServiceMenu';
-import EstheticServiceMenu from './pages/EstheticServiceMenu';
-import StylistDetails from './pages/StylistDetails';
+import ServiceDetails from './pages/ServiceDetails';
+import About from './pages/About';
 
 const App = () => {
   return (
@@ -15,15 +14,11 @@ const App = () => {
       <main>
         <Switch>
           <Route exact path="/" component={(props) => <Home {...props} />} />
-          <Route path="/hair-service-menu" component={HairServiceMenu} />
           <Route
-            path="/esthetic-service-menu"
-            component={EstheticServiceMenu}
+            path="/services/details/:serviceId"
+            render={(props) => <ServiceDetails {...props} />}
           />
-          <Route
-            path="/stylists/:stylistId"
-            render={(props) => <StylistDetails {...props} />}
-          />
+          <Route exact path="/about" component={About} />
         </Switch>
       </main>
     </div>

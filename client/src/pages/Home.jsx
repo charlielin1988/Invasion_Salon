@@ -1,52 +1,58 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import StylistCard from '../components/StylistCard'
+import ServiceCard from '../components/ServiceCard'
 import { useHistory } from 'react-router-dom'
 
 
 const Home = (props) => {
   let history = useHistory()
-  const [stylists, setStylists] = useState ([])
+  const [services, setServices] = useState([])
   
   useEffect(()=> {
-    const getStylists= async () => {
-      const res = await axios.get(
-        `http://localhost:3001/api/stylists`
-      )
-      setStylists(res.data.stylists)
-      console.log(res.data)
-    }
-    getStylists()
+    getServices()
   }, [])
+    const getServices= async () => {
+      const res = await axios.get(
+        `http://localhost:3001/api/services`
+      )
+      setServices(res.data.services)
+     
+    }
+   
 
   
   
   return(
   <div className="home">
   <h1>Welcome To Invasion!</h1>
-  <h2>Our Beauty Baelians</h2>
-  <section className = "stylists-section">
-    <div className = "stylist-grid">
-      {stylists.map((stylist) => {
-        {
+  <h2>Hours:</h2>
+  <p>Tuesday-Saturday, 10AM-7PM</p>
+  <h3>Services:</h3>
+  <div className= "service-grid">
+      {services.map((service) => {
+        
         return (
-          <StylistCard
-          key={stylist._id}
-          onClick={() => history.push(`/stylists/${stylist._id}`)}
-          name={stylist.name}
-          service_type={stylist.service_type}
-          availability={stylist.availability}
-          />
+          <ServiceCard
+          key={service._id}
+          onClick={() => history.push(`/services/details/${service._id}`)}
+          service_name={service.service_name}
+          price={service.price}
+          image={service.url}
+          description={service.description}
+
+          /> 
+      
         )
-      }
-      })}
+      
+    })}
+    
     </div>
     
-  </section>
+    </div>
         
       
     
-  </div>
+
   )
 }
 export default Home 
