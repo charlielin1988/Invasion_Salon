@@ -51,7 +51,6 @@ const AppointmentForm = (props) => {
         <section className="hair-service-input">
           Hair Service:
           <select name={'service_name'} onChange={(e) => handleChange(e)}>
-            <option value="0">None</option>
             <option value="1">Single Process Color</option>
             <option value="2">Dimensional Blonde</option>
             <option value="3">Global Blonde</option>
@@ -65,22 +64,7 @@ const AppointmentForm = (props) => {
             <option value="11">Olaplex Treatment</option>
           </select>
         </section>
-        <section className="esthetic-service-input">
-          Esthetic Service:
-          <select name={'service_name'} onChange={(e) => handleChange(e)}>
-            <option value="0">None</option>
-            <option value="1">Lip Wax</option>
-            <option value="2">Brow Wax</option>
-            <option value="3">Brow Wax And Tint</option>
-            <option value="4">Lash Tint</option>
-            <option value="5">Feel Good Facial</option>
-            <option value="6">Get Glowing Facial</option>
-            <option value="7">Let's Be Clear Facial</option>
-            <option value="8">The Works Facial</option>
-            <option value="9">The Microdermabrasion Express</option>
-            <option value="10">Back Facial</option>
-          </select>
-        </section>
+
         <section className="appointment-date-input">
           Date:
           <input

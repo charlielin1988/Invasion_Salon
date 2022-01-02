@@ -1,11 +1,10 @@
 const mongoose = require('mongoose');
-const StylistSchema = require('./stylist');
 const AppointmentSchema = require('./appointment');
+const ServiceSchema = require('./service');
 
-const Stylist = mongoose.model('stylists', StylistSchema);
 const Appointment = mongoose.model('appointments', AppointmentSchema);
-
+const Service = mongoose.model('services', ServiceSchema);
 module.exports = {
-  Stylist,
-  Appointment
+  Appointment,
+  Service
 };
