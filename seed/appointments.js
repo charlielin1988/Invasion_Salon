@@ -22,25 +22,29 @@ const main = async () => {
       customer_name: 'Emika Chen',
       date: '01/14/2022',
       time: '2:00 PM',
-      service_id: galaxy[0]._id
+      service_id: galaxy[0]._id,
+      service_item: 'Galaxy Hair'
     },
     {
       customer_name: 'Hamilton Jimenez',
       date: '01/15/2022',
       time: '10:00 AM',
-      service_id: long[0]._id
+      service_id: long[0]._id,
+      service_item: 'Long Layered Cut'
     },
     {
       customer_name: 'Asher Wing',
       date: '01/15/2022',
       time: '3:30 PM',
-      service_id: short[0]._id
+      service_id: short[0]._id,
+      service_item: 'Short Or Buzz Cut'
     },
     {
       customer_name: 'Tremaine Blackbourne',
       date: '01/14/2022',
       time: '10:00 AM',
-      service_id: global[0]._id
+      service_id: global[0]._id,
+      service_item: 'Global Blonde'
     }
   ];
   await Appointment.insertMany(appointments);

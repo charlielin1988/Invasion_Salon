@@ -1,6 +1,7 @@
 import React from 'react'
 
 const ServiceCard = (props) => {
+  
   return (
     <div className= 'service-card' onClick={props.onClick}>
       <section className= 'service-info'>

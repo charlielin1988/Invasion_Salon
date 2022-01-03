@@ -3,10 +3,10 @@ const Schema = mongoose.Schema;
 
 const Service = new Schema(
   {
-    service_name: { type: String, required: true },
-    price: { type: String, required: true },
-    description: { type: String, required: true },
-    url: { type: String, required: true }
+    service_name: { type: String },
+    price: { type: String },
+    description: { type: String },
+    image: { type: String }
   },
   { timestamps: true }
 );
