@@ -38,11 +38,11 @@ div.home-page {
 div.about {
   margin: 20px;
   padding: 20px;
+  color: black;
+  font-size: x-large;
+  text-shadow: 0 0 3px lavenderblush;
 }
 p.about-info {
   font-style: normal;
   font-weight: bolder;
-  color: black;
-  font-size: x-large;
-  text-shadow: 0 0 3px lavenderblush;
 }
