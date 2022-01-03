@@ -5,24 +5,44 @@ body {
   width: 100vh;
   height: 100vw;
   text-align: center;
-  color: black;
+  color: white;
+  background: url(https://downloadhdwallpapers.in/wp-content/uploads/2018/10/Abstract-Outer-Space-Stars-Nebulae-Artwork-Tyler-Young-High-Resolution-iPhone-Photograph.jpg)
+    no-repeat;
+  background-size: cover;
 }
-.ServiceMenu {
+
+header {
+  width: 100vw;
+}
+
+main {
+  width: 100vw;
+  text-align: center;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: lime;
+}
+nav.navbar {
   display: flex;
-  height: 90vh;
-  width: 100vw;
-  align-content: center;
+  flex-wrap: nowrap;
+  justify-content: space-around;
 }
-.service-list {
-  list-style: none;
-  width: 100vw;
+div.home-page {
+  margin: 20px;
+  padding: 20px;
 }
-.navbar {
-  width: 100vw;
-  text-align: center;
-  margin: 10px;
+div.about {
+  margin: 20px;
+  padding: 20px;
 }
-div.home {
-  width: 100vw;
-  text-align: center;
+p.about-info {
+  font-style: normal;
+  font-weight: bolder;
+  color: black;
+  font-size: x-large;
+  text-shadow: 0 0 3px lavenderblush;
 }

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import '../styles/Services.css'
 import axios from 'axios'
 import ServiceCard from '../components/ServiceCard'
 

@@ -8,16 +8,14 @@ return (
     <h2>Hours:</h2>
     <p>Tuesday-Saturday, 10:00 AM-7:00PM</p>
     <Link to="/about">
-      <button className="about-button"></button>
-    <h2>Maybe Saylor, Hair Extraordinnaire</h2>
+     <h2>🗡 Maybe Saylor, Hair Slayer 🗡</h2>
+    
     </Link>
     <Link to ='/services'>
-    <h2>View Services</h2>
-    <button className="services-button"></button>
+    <h3> 👑 View Hair Slayage Menu 👑 </h3>
     </Link>
     <Link to ='/appointments'>
-      <button className='appointments-button'></button>
-      <h2>Appointments</h2>
+    <h3> ✨ Get Your Dream Hair ✨ </h3>
     </Link>
   </div>
 )
