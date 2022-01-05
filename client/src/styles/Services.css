@@ -3,6 +3,7 @@
 }
 div.services-page {
   background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.c2UkYdtnk8wBPJAOjWigwAHaEK%26pid%3DApi&f=1);
+  height: 250vh;
 }
 h1 {
   text-align: center;
@@ -16,10 +17,9 @@ div.services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, 500px);
   row-gap: 15px;
-  background-image: radial-gradient(#c31432, #240b36);
   justify-content: space-evenly;
 }
-p {
+p.services {
   text-rendering: optimizeLegibility;
   font-style: italic;
   margin: 16px 200px 0px 200px;

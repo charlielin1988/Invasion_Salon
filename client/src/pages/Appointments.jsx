@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import AppointmentCard from '../components/AppointmentCard'
 import AppointmentForm from '../components/AppointmentForm'
-
+import '../styles/Appointments.css'
 const Appointments = (props) => {
   const [appointments, setAppointments] = useState([])
   const [form, setForm] = useState ({
@@ -22,7 +22,7 @@ const getAppointments = async () => {
   
 }
 const handleChange= async (e) => {
-  await setForm({...form, [e.target.customer_name]: e.target.value })
+  await setForm({...form, [e.target.date]: e.target.value })
 }
 const handleAdd = async (e) => {
   e.preventDefault()

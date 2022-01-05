@@ -1,0 +1,9 @@
+.About {
+  text-align: center;
+}
+div.about {
+  color: white;
+  font-size: x-large;
+  text-shadow: 0 0 3px lime;
+  height: 250vh;
+}
