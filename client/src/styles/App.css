@@ -1,19 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&family=Nova+Square&family=Orbitron:wght@500&display=swap');
 .App {
   text-align: center;
 }
 body {
   width: 100vw;
+  height: 100vh;
   text-align: center;
   color: white;
   background-color: black;
+  background-image: url(https://i.imgur.com/bQ0vbOn.png);
+  background-position: bottom;
+  background-size: 25%;
+  background-repeat: no-repeat;
 
   font-family: 'Orbitron', sans-serif;
 }
 
 header {
   width: 100vw;
-  background-color: black;
 }
 
 main {
@@ -35,18 +39,14 @@ nav.navbar {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
-  background-color: black;
+  /* background-color: black; */
 }
 div.home-page {
   min-height: 100%;
   color: rgb(228, 17, 122);
-  background-image: url(https://i.imgur.com/bQ0vbOn.png);
-  background-position: left;
-  background-size: contain;
-  background-repeat: space;
 
-  margin-top: 40px;
-  padding-top: 80px;
+  margin-top: 3%;
+
   font-weight: bold;
   text-shadow: 0 0 6px black;
 }
@@ -55,12 +55,17 @@ h2.home {
   color: rgb(228, 17, 122);
   font-size: 2em;
   font-weight: bold;
+  font-family: 'Nova Square', cursive;
 }
 
 p.home {
   font-size: 2em;
-  margin-top: 40px;
+  /* margin-top: 40px; */
+  color: rgb(228, 17, 122);
+  font-family: 'Nova Square', cursive;
 }
 h2.maybe {
   margin-top: 20px;
+  color: rgb(228, 17, 122);
+  font-family: 'Nosifer', cursive;
 }
