@@ -2,8 +2,14 @@
   text-align: center;
 }
 div.about {
-  color: white;
+  color: black;
+  text-shadow: 0px 0px 3px lime;
   font-size: x-large;
-  text-shadow: 0 0 3px lime;
-  height: 250vh;
+  min-height: 100%;
+}
+div.about-info {
+  color: white;
+  text-shadow: none;
+  font-weight: bold;
+  background-color: black;
 }

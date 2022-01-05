@@ -1,20 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 .App {
   text-align: center;
 }
 body {
-  width: 100vh;
-  height: 100vw;
+  width: 100vw;
   text-align: center;
   color: white;
   background-color: black;
-  background-image: url(https://i.imgur.com/bQ0vbOn.png);
-  background-position: center;
-  background-size: 33%;
-  background-repeat: no-repeat;
+
+  font-family: 'Orbitron', sans-serif;
 }
 
 header {
   width: 100vw;
+  background-color: black;
 }
 
 main {
@@ -25,18 +24,43 @@ main {
 a {
   text-decoration: none;
 }
-a:hover {
-  color: lime;
-}
 a:visited {
   color: hotpink;
 }
+a:hover {
+  color: lime;
+}
+
 nav.navbar {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
+  background-color: black;
 }
 div.home-page {
-  margin: 20px;
-  padding: 20px;
+  min-height: 100%;
+  color: rgb(228, 17, 122);
+  background-image: url(https://i.imgur.com/bQ0vbOn.png);
+  background-position: left;
+  background-size: contain;
+  background-repeat: space;
+
+  margin-top: 40px;
+  padding-top: 80px;
+  font-weight: bold;
+  text-shadow: 0 0 6px black;
+}
+
+h2.home {
+  color: rgb(228, 17, 122);
+  font-size: 2em;
+  font-weight: bold;
+}
+
+p.home {
+  font-size: 2em;
+  margin-top: 40px;
+}
+h2.maybe {
+  margin-top: 20px;
 }

@@ -12,4 +12,11 @@ View the component hierarchy diagram for the project [here](https://lucid.app/lu
 
 ### Credits
 
-ERD reference
+ERD reference:[Github](https://github.com/SEI-R-11-8/u2_lesson_ERD)
+
+Home, About Background Image:[SilhouetteGarden](https://silhouettegarden.com/download/alien-head-silhouette/)
+
+Services,Appointment Background: [DuckDuckGo](c2UkYdtnk8wBPJAOjWigwAHaEK)
+
+General References: [GitHub](https://github.com/SEI-R-11-8)
+Lessons
