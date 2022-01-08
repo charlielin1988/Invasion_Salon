@@ -2,31 +2,6 @@ const Service = require('../models/service');
 const Appointment = require('../models/appointment');
 const { process_params } = require('express/lib/router');
 
-const createService = async (req, res) => {
-  try {
-    const service = await new Service(req.body);
-    await service.save();
-    return res.status(201).json({
-      service
-    });
-  } catch (error) {
-    console.log(error.message);
-    return res.status(500);
-  }
-};
-
-const createAppointment = async (req, res) => {
-  try {
-    const appointment = await new Appointment(req.body);
-    await appointment.save();
-    return res.status(201).json({
-      appointment
-    });
-  } catch (error) {
-    return res.status(500).json({ error: error.message });
-  }
-};
-
 const getAllServices = async (req, res) => {
   try {
     const services = await Service.find();
@@ -73,6 +48,31 @@ const getAppointmentById = async (req, res) => {
   }
 };
 
+const createService = async (req, res) => {
+  try {
+    const service = await new Service(req.body);
+    await service.save();
+    return res.status(201).json({
+      service
+    });
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500);
+  }
+};
+
+const createAppointment = async (req, res) => {
+  try {
+    const appointment = await new Appointment(req.body);
+    await appointment.save();
+    return res.status(201).json({
+      appointment
+    });
+  } catch (error) {
+    return res.status(500).json({ error: error.message });
+  }
+};
+
 const updateAppointment = async (req, res) => {
   try {
     const { _id } = req.params;
@@ -81,18 +81,10 @@ const updateAppointment = async (req, res) => {
       req.body,
       { new: true },
       (err, appointment) => {
-        if (err) {
-          res.status(500).send(err);
-        }
-        if (!appointment) {
-          res.status(500).send('Appointment not found!');
-        }
         return res.status(200).json(appointment);
       }
     );
-  } catch (error) {
-    return res.status(500).json({ error: error.message });
-  }
+  } catch (error) {}
 };
 
 const updateService = async (req, res) => {
@@ -103,19 +95,10 @@ const updateService = async (req, res) => {
       req.body,
       { new: true },
       (err, service) => {
-        if (err) {
-          res.status(500).send(err);
-        }
-        if (!service) {
-          res.status(500).send('Service Not Found');
-        }
         return res.status(200).json(service);
       }
     );
-  } catch (error) {
-    console.log(error.message);
-    return res.status(500);
-  }
+  } catch (error) {}
 };
 const deleteService = async (req, res) => {
   try {
