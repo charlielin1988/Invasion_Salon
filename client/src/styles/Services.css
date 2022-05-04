@@ -1,12 +1,13 @@
 .Services {
   text-align: center;
 }
-div.services-page {
-  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.c2UkYdtnk8wBPJAOjWigwAHaEK%26pid%3DApi&f=1);
-  min-height: 100%;
+.services-page {
+  color: white;
 }
 h1 {
   text-align: center;
+  margin-top: 2em;
+  letter-spacing: 0.15em;
 }
 img {
   max-height: 20vh;
@@ -15,15 +16,22 @@ img {
 }
 div.services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 500px);
-  row-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   justify-content: space-evenly;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
 }
-p.services {
-  text-rendering: optimizeLegibility;
-  font-style: italic;
-  margin: 16px 200px 0px 200px;
+.services {
+  display: block;
+  /* font-style: italic; */
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  font-stretch: wider;
+  padding-top: 0.5em;
+  width: 50%;
+
   font-weight: bold;
+}
+.service-name {
+  color: rgb(228, 17, 122);
 }

@@ -30,21 +30,24 @@ const handleAdd = async (e) => {
 }
 const handleCancel = async (e)=>{
   e.preventDefault() 
-  await axios.delete(`http://localhost:3001/api/appointments/details/${e.target.id}`)
+  await axios.delete(`http://localhost:3001/api/appointments/${e.target.id}`)
 }
 return (
   <div className = 'appointments-page'>
-    <h1>Appointments</h1>
-    <AppointmentForm onChange={handleChange} onSubmit={handleAdd} />
-    <section className = 'appointment-info'>
-      {appointments.map((appointment)=> (
-      <AppointmentCard 
-      key={appointment._id}
-      {...appointment}
-      onClick={handleCancel}
-      />
-      ))}
-    </section>
+    <h1 className="appointments">Appointments</h1>
+    <div className='appointment-container'>
+      <AppointmentForm onChange={handleChange} onSubmit={handleAdd} />
+      <section className = 'appointment-info'>
+        {appointments.map((appointment)=> (
+        <AppointmentCard 
+        key={appointment._id}
+        {...appointment}
+        onClick={handleCancel}
+      
+        />
+        ))}
+      </section>
+    </div>
   </div>
 )
 }

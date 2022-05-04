@@ -6,18 +6,23 @@ body {
   width: 100vw;
   height: 100vh;
   text-align: center;
-  color: white;
+
   background-color: black;
-  background-image: url(https://i.imgur.com/bQ0vbOn.png);
-  background-position: bottom;
-  background-size: 25%;
-  background-repeat: no-repeat;
 
   font-family: 'Orbitron', sans-serif;
 }
 
 header {
   width: 100vw;
+}
+
+.logo__img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  min-height: 40vh;
+  width: auto;
 }
 
 main {
@@ -39,33 +44,33 @@ nav.navbar {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
-  /* background-color: black; */
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 div.home-page {
-  min-height: 100%;
   color: rgb(228, 17, 122);
-
-  margin-top: 3%;
-
+  margin-top: 4rem;
   font-weight: bold;
   text-shadow: 0 0 6px black;
 }
 
-h2.home {
-  color: rgb(228, 17, 122);
-  font-size: 2em;
-  font-weight: bold;
-  font-family: 'Nova Square', cursive;
-}
-
-p.home {
-  font-size: 2em;
-  /* margin-top: 40px; */
+.hours {
+  font-size: 2rem;
+  margin: 0;
   color: rgb(228, 17, 122);
   font-family: 'Nova Square', cursive;
+  line-height: 5rem;
+  letter-spacing: 0.25rem;
 }
-h2.maybe {
-  margin-top: 20px;
+.maybe {
   color: rgb(228, 17, 122);
   font-family: 'Nosifer', cursive;
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+  margin-bottom: 1rem;
+}
+.welcome {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
 }

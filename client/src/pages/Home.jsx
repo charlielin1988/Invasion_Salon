@@ -4,19 +4,14 @@ import { Link } from 'react-router-dom'
 const Home = () => {
 return (
   <div className = 'home-page'>
-    <h1>Welcome To Invasion!</h1>
-    <h2 className='home'>Hours:</h2>
-    <p className='home'>Tuesday-Saturday, 10:00 AM-7:00PM</p>
-    <Link to="/about">
-     <h2 className='maybe'>🗡 Maybe Saylor, Hair Slayer 🗡</h2>
     
-    </Link>
-    <Link to ='/services'>
-    <h3> 👑 View Hair Slayage Menu 👑 </h3>
-    </Link>
-    <Link to ='/appointments'>
-    <h3> ✨ Get Your Dream Hair ✨ </h3>
-    </Link>
+      <h1 className='welcome'>Welcome To Invasion!</h1>
+      <Link to="/about">
+        <h3 className='maybe'>🗡 Maybe Saylor: Hair Slayer 🗡</h3>
+      </Link>
+      <p className='hours'>Hours:<br></br>Tuesday-Saturday<br></br> 10:00 AM-7:00PM</p>
+      <img className='logo__img' src="https://i.imgur.com/bQ0vbOn.png" alt="logo" />
+      
   </div>
 )
 }

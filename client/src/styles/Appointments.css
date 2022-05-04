@@ -1,4 +1,11 @@
 div.appointments-page {
-  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.c2UkYdtnk8wBPJAOjWigwAHaEK%26pid%3DApi&f=1);
-  min-height: 100%;
+  color: white;
+}
+.add-appointment {
+  margin-top: 1em;
+  display: grid;
+}
+.appointment-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
